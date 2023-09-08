@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+flask_market_env/
 
 # Spyder project settings
 .spyderproject
