@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Register Page
+Login Page
 {% endblock%}
-
 
 {% block content %}
 
@@ -13,34 +12,26 @@ Register Page
         <form method="post" class="form-register" style="color: white;">
             {{ form.hidden_tag() }}
             <h1 class="h3 mb-3 font-weight-normal">
-                Please Create Your Account
+                Please Login
             </h1>
             <br>
 
             {{ form.username.label() }}
             {{ form.username(class='form-control', placeholder="User Name") }}
-            {{ form.email_address.label() }}
-            {{ form.email_address(class='form-control', placeholder="Email Address") }}
             {{ form.password1.label() }}
             {{ form.password1(class='form-control', placeholder="Password") }}
-            {{ form.password2.label() }}
-            {{ form.password2(class='form-control', placeholder="Confirm Password") }}
 
-            
             <br>
 
             {{ form.submit(class='btn-lg btn-block btn-primary') }}
+            <br>
+            <div class="checkbox mb3">
+                <h4>Don't have an account</h4>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}"> Register</a>
+            </div>
         </form>
 
-
     </div>
-    <br>
-    <div class="checkbox mb3">
-        <h4>Already have an account</h4>
-        <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}"> Login</a>
-    </div>
- 
-   
     
 </body>    
 
